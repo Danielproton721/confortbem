@@ -362,10 +362,4 @@ function HomePage() {
       )}
     </main>
   );
-}/p>
-          </div>
-        </div>
-      </footer>
-    </main>
-  );
 }
