@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Sparkles, Bed, Layers, Square, MapPin, Mail, Phone } from "lucide-react";
+import { Sparkles, Bed, Layers, Square, MapPin, Mail } from "lucide-react";
 import heroImage from "@/assets/hero-interior.jpg";
 
 export const Route = createFileRoute("/")({
@@ -81,13 +81,13 @@ function HomePage() {
                 href="#contato"
                 className="inline-flex items-center justify-center rounded-sm bg-background px-8 py-4 text-sm uppercase tracking-widest text-foreground transition-all hover:bg-accent"
               >
-                Fale com o Atelie
+                Fale com um consultor
               </a>
               <a
                 href="#servicos"
                 className="inline-flex items-center justify-center rounded-sm border border-background/60 px-8 py-4 text-sm uppercase tracking-widest text-background transition-all hover:bg-background/10"
               >
-                Nossa Coleção
+                Conheça nossa linha
               </a>
             </div>
           </div>
@@ -105,9 +105,10 @@ function HomePage() {
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              A Voil Atelie nasceu da paixão por ambientes acolhedores e bem compostos.
-              Há anos atendemos famílias e arquitetos em Garça e região, oferecendo
-              enxovais e peças decorativas com padrão premium e atendimento próximo.
+              A <strong className="text-foreground">Voil Atelie Comércio de Enxovais e Decoração LTDA</strong> nasceu
+              da paixão por ambientes acolhedores e bem compostos. Há anos atendemos famílias e
+              arquitetos em Garça e região, oferecendo enxovais e peças decorativas com padrão
+              premium e atendimento próximo.
             </p>
             <p>
               Trabalhamos apenas com fornecedores de confiança e tecidos selecionados,
@@ -165,20 +166,6 @@ function HomePage() {
                 </div>
               </li>
               <li className="flex items-start gap-4">
-                <Phone className="mt-1 h-5 w-5 shrink-0 text-accent" />
-                <div>
-                  <p className="font-medium">WhatsApp</p>
-                  <a
-                    href="https://wa.me/5514000000000"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-accent"
-                  >
-                    Falar com o atendimento
-                  </a>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
                 <Mail className="mt-1 h-5 w-5 shrink-0 text-accent" />
                 <div>
                   <p className="font-medium">E-mail</p>
@@ -195,18 +182,10 @@ function HomePage() {
 
           <div className="flex flex-col gap-4">
             <a
-              href="https://wa.me/5514000000000"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-sm bg-foreground px-8 py-5 text-sm uppercase tracking-widest text-background transition-all hover:bg-primary"
-            >
-              Conversar no WhatsApp
-            </a>
-            <a
               href="mailto:contato@voilatelie.com.br"
               className="inline-flex items-center justify-center rounded-sm border border-foreground/20 px-8 py-5 text-sm uppercase tracking-widest text-foreground transition-all hover:bg-secondary"
             >
-              Enviar E-mail
+              Solicite um catálogo por e-mail
             </a>
             <div className="mt-4 overflow-hidden rounded-sm border border-border">
               <iframe
@@ -237,9 +216,10 @@ function HomePage() {
             </div>
             <div className="text-sm text-muted-foreground">
               <p className="font-medium text-foreground mb-3">Empresa</p>
-              <p>Voil Atelie Comércio de Enxovais e Decoração LTDA</p>
+              <p>Voil Atelie Comercio de Enxovais e Decoracao LTDA</p>
               <p className="mt-1">CNPJ: 64.980.979/0001-94</p>
-              <p className="mt-1">Rua São João, 86 — Garça/SP — 17404-308</p>
+              <p className="mt-1">Rua São João, 86 — Labienópolis — Garça/SP — CEP 17404-308</p>
+              <p className="mt-1">contato@voilatelie.com.br</p>
             </div>
             <div className="text-sm">
               <p className="font-medium mb-3">Institucional</p>
