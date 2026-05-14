@@ -3,8 +3,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/termos-de-uso")({
   head: () => ({
     meta: [
-      { title: "Termos de Uso | Voil Atelie" },
-      { name: "description", content: "Termos de Uso do site institucional da Voil Atelie." },
+      { title: "Termos de Uso | Confortebem" },
+      { name: "description", content: "Termos de Uso do site institucional da Confortebem (Voil Atelie Comercio de Enxovais e Decoracao LTDA)." },
     ],
   }),
   component: TermsPage,
@@ -21,8 +21,9 @@ function TermsPage() {
         <div className="mt-12 space-y-6 text-base leading-relaxed text-muted-foreground">
           <p>
             O presente documento estabelece os Termos de Uso aplicáveis à navegação no site
-            institucional da <strong className="text-foreground">Voil Atelie Comércio de Enxovais e
-            Decoração LTDA</strong>, CNPJ 64.980.979/0001-94, sediada na Rua São João, 86,
+            institucional da marca <strong className="text-foreground">Confortebem</strong>, operada por
+            <strong className="text-foreground"> Voil Atelie Comércio de Enxovais e Decoração LTDA</strong>,
+            CNPJ 64.980.979/0001-94, sediada na Rua São João, 86,
             Labienópolis, Garça/SP, CEP 17404-308.
           </p>
 
@@ -36,7 +37,7 @@ function TermsPage() {
           <h2 className="text-2xl text-foreground">2. Propriedade intelectual</h2>
           <p>
             Todo o conteúdo apresentado — textos, imagens, marca, identidade visual e elementos
-            gráficos — é de titularidade exclusiva da Voil Atelie ou de terceiros licenciantes,
+            gráficos — é de titularidade exclusiva da Confortebem / Voil Atelie Comércio de Enxovais e Decoração LTDA ou de terceiros licenciantes,
             sendo proibida sua reprodução, total ou parcial, sem autorização prévia e por escrito.
           </p>
 
@@ -44,19 +45,19 @@ function TermsPage() {
           <p>
             O usuário compromete-se a utilizar o site de forma ética, em conformidade com a
             legislação vigente, abstendo-se de praticar atos que possam comprometer a integridade
-            do serviço, de outros usuários ou da própria Voil Atelie.
+            do serviço, de outros usuários ou da própria Confortebem.
           </p>
 
           <h2 className="text-2xl text-foreground">4. Limitação de responsabilidade</h2>
           <p>
-            A Voil Atelie envida seus melhores esforços para manter as informações atualizadas e
+            A Confortebem envida seus melhores esforços para manter as informações atualizadas e
             corretas, mas não se responsabiliza por eventuais imprecisões, indisponibilidades
             temporárias ou danos decorrentes do uso indevido do site.
           </p>
 
           <h2 className="text-2xl text-foreground">5. Links externos</h2>
           <p>
-            Este site pode conter links para páginas de terceiros. A Voil Atelie não se
+            Este site pode conter links para páginas de terceiros. A Confortebem não se
             responsabiliza pelo conteúdo, políticas ou práticas de privacidade desses sites.
           </p>
 

@@ -72,11 +72,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Voil Atelie | Enxovais, Cortinas e Decoração de Interiores" },
-      { name: "description", content: "Voil Atelie — especialistas em enxovais, cortinas sob medida, tapetes e decoração de interiores em Garça, SP. Elegância e conforto para o seu lar." },
-      { name: "author", content: "Voil Atelie" },
-      { property: "og:title", content: "Voil Atelie | Enxovais e Decoração" },
-      { property: "og:description", content: "Especialistas em transformar espaços com enxovais, cortinas e decoração premium." },
+      { title: "Confortebem | Enxovais, Conforto e Bem-estar para o Lar" },
+      { name: "description", content: "Confortebem — especialistas em enxovais, cortinas sob medida, tapetes e decoração premium. Conforto e bem-estar para o seu lar. Operada por Voil Atelie LTDA, Garça/SP." },
+      { name: "author", content: "Confortebem" },
+      { property: "og:title", content: "Confortebem | Enxovais e Bem-estar" },
+      { property: "og:description", content: "Conforto, elegância e bem-estar em cada detalhe do seu lar." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
     ],
@@ -98,7 +98,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>

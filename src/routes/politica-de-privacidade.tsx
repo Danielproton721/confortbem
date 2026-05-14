@@ -3,8 +3,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/politica-de-privacidade")({
   head: () => ({
     meta: [
-      { title: "Política de Privacidade | Voil Atelie" },
-      { name: "description", content: "Política de Privacidade da Voil Atelie em conformidade com a LGPD." },
+      { title: "Política de Privacidade | Confortebem" },
+      { name: "description", content: "Política de Privacidade da Confortebem (Voil Atelie Comercio de Enxovais e Decoracao LTDA) em conformidade com a LGPD." },
     ],
   }),
   component: PrivacyPage,
@@ -20,9 +20,10 @@ function PrivacyPage() {
 
         <div className="prose prose-neutral mt-12 space-y-6 text-base leading-relaxed text-muted-foreground">
           <p>
-            A <strong className="text-foreground">Voil Atelie Comércio de Enxovais e Decoração LTDA</strong>,
+            A marca <strong className="text-foreground">Confortebem</strong>, operada por
+            <strong className="text-foreground"> Voil Atelie Comércio de Enxovais e Decoração LTDA</strong>,
             inscrita no CNPJ sob nº 64.980.979/0001-94, com sede à Rua São João, 86, Labienópolis, Garça/SP,
-            CEP 17404-308 ("Voil Atelie", "nós"), valoriza a privacidade de seus visitantes e clientes e
+            CEP 17404-308 ("Confortebem", "nós"), valoriza a privacidade de seus visitantes e clientes e
             está comprometida com a proteção dos dados pessoais em conformidade com a Lei nº 13.709/2018
             (Lei Geral de Proteção de Dados - LGPD).
           </p>
@@ -31,7 +32,7 @@ function PrivacyPage() {
           <p>
             Coletamos apenas dados estritamente necessários para o atendimento ao cliente, incluindo:
             nome, telefone, e-mail e mensagens enviadas voluntariamente por meio de nossos canais de
-            contato (WhatsApp, e-mail e formulários).
+            contato (e-mail e formulários).
           </p>
 
           <h2 className="text-2xl text-foreground">2. Finalidade do tratamento</h2>
@@ -43,7 +44,7 @@ function PrivacyPage() {
 
           <h2 className="text-2xl text-foreground">3. Compartilhamento</h2>
           <p>
-            A Voil Atelie não comercializa dados pessoais. O compartilhamento ocorre apenas quando
+            A Confortebem (Voil Atelie Comércio de Enxovais e Decoração LTDA) não comercializa dados pessoais. O compartilhamento ocorre apenas quando
             necessário para cumprimento de obrigação legal ou ordem de autoridade competente.
           </p>
 
@@ -58,7 +59,7 @@ function PrivacyPage() {
           <p>
             Nos termos da LGPD, o titular dos dados pode solicitar acesso, correção, anonimização,
             portabilidade ou exclusão de seus dados, bem como revogar consentimento. As solicitações
-            devem ser enviadas para o e-mail: <strong className="text-foreground">contato@voilatelie.com.br</strong>.
+            devem ser enviadas para o e-mail: <strong className="text-foreground">contato@confortebem.com.br</strong>.
           </p>
 
           <h2 className="text-2xl text-foreground">6. Segurança</h2>
@@ -70,7 +71,7 @@ function PrivacyPage() {
           <h2 className="text-2xl text-foreground">7. Contato do encarregado</h2>
           <p>
             Para qualquer dúvida relacionada a esta Política, entre em contato pelo e-mail
-            <strong className="text-foreground"> contato@voilatelie.com.br</strong>.
+            <strong className="text-foreground"> contato@confortebem.com.br</strong>.
           </p>
         </div>
       </div>
