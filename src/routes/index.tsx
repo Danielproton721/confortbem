@@ -187,17 +187,7 @@ function HomePage() {
             >
               Solicite um catálogo por e-mail
             </a>
-            <div className="mt-4 overflow-hidden rounded-sm border border-border">
-              <iframe
-                title="Localização Confortebem"
-                src="https://www.google.com/maps?q=Rua+S%C3%A3o+Jo%C3%A3o,+86,+Gar%C3%A7a+-+SP,+17404-308&output=embed"
-                width="100%"
-                height="280"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                style={{ border: 0 }}
-              />
-            </div>
+
           </div>
         </div>
       </section>
