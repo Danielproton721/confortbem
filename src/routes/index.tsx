@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Sparkles, Bed, Layers, Square, MapPin, Mail, Phone, Instagram } from "lucide-react";
+import { Sparkles, Bed, Layers, Square, MapPin, Mail, Phone } from "lucide-react";
 import heroImage from "@/assets/hero-interior.jpg";
 
 export const Route = createFileRoute("/")({
