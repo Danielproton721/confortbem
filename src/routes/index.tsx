@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Sparkles, Bed, Layers, Square, MapPin, Mail } from "lucide-react";
+import { Sparkles, Bed, Layers, Square, MapPin, Mail, X, Send, CheckCircle2 } from "lucide-react";
 import heroImage from "@/assets/hero-interior.jpg";
 
 export const Route = createFileRoute("/")({
@@ -40,6 +41,19 @@ const services = [
 ];
 
 function HomePage() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+    // Simulation of a successful send
+    setTimeout(() => {
+      setIsSubmitted(false);
+      setIsModalOpen(false);
+    }, 3000);
+  };
+
   return (
     <main className="min-h-screen bg-background text-foreground">
       {/* Header */}
@@ -77,12 +91,12 @@ function HomePage() {
               decorativas selecionadas para transformar sua casa em um refúgio acolhedor.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href="#contato"
-                className="inline-flex items-center justify-center rounded-sm bg-background px-8 py-4 text-sm uppercase tracking-widest text-foreground transition-all hover:bg-accent"
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="inline-flex cursor-pointer items-center justify-center rounded-sm bg-background px-8 py-4 text-sm uppercase tracking-widest text-foreground transition-all hover:bg-accent"
               >
                 Fale com um consultor
-              </a>
+              </button>
               <a
                 href="#servicos"
                 className="inline-flex items-center justify-center rounded-sm border border-background/60 px-8 py-4 text-sm uppercase tracking-widest text-background transition-all hover:bg-background/10"
@@ -105,7 +119,7 @@ function HomePage() {
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              A <strong className="text-foreground">Confortebem</strong> é uma marca dedicada a oferecer
+              A <strong className="text-foreground">Confortebem</strong> é uma brand dedicada a oferecer
               conforto e bem-estar para o lar. Operada pela <strong className="text-foreground">Voil Atelie
               Comércio de Enxovais e Decoração LTDA</strong>, atendemos famílias e arquitetos em Garça e
               região com enxovais e peças decorativas de padrão premium e atendimento próximo.
@@ -181,13 +195,12 @@ function HomePage() {
           </div>
 
           <div className="flex flex-col gap-4">
-            <a
-              href="mailto:contato@confortebem.com.br"
-              className="inline-flex items-center justify-center rounded-sm border border-foreground/20 px-8 py-5 text-sm uppercase tracking-widest text-foreground transition-all hover:bg-secondary"
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="inline-flex cursor-pointer items-center justify-center rounded-sm border border-foreground/20 px-8 py-5 text-sm uppercase tracking-widest text-foreground transition-all hover:bg-secondary"
             >
               Solicite um catálogo por e-mail
-            </a>
-
+            </button>
           </div>
         </div>
       </section>
@@ -225,6 +238,93 @@ function HomePage() {
           <div className="mt-12 border-t border-border pt-6 text-xs text-muted-foreground flex flex-wrap justify-between gap-2">
             <p>© {new Date().getFullYear()} Confortebem — Voil Atelie Comercio de Enxovais e Decoracao LTDA. Todos os direitos reservados.</p>
             <p>Garça — São Paulo — Brasil</p>
+          </div>
+        </div>
+      </footer>
+
+      {/* Contact Modal Popup */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div 
+            className="absolute inset-0 bg-foreground/30 backdrop-blur-sm animate-in fade-in duration-300" 
+            onClick={() => setIsModalOpen(false)}
+          />
+          <div className="relative w-full max-w-lg overflow-hidden rounded-md bg-background shadow-2xl animate-in zoom-in-95 fade-in duration-300 border border-border">
+            <button 
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
+            <div className="p-8">
+              {!isSubmitted ? (
+                <>
+                  <div className="mb-8 text-center">
+                    <h3 className="text-2xl font-light tracking-tight text-foreground">Solicitar Atendimento</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">Preencha os campos abaixo e entraremos em contato.</p>
+                  </div>
+
+                  <form onSubmit={handleSubmit} className="space-y-5">
+                    <div>
+                      <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">Nome Completo</label>
+                      <input 
+                        type="text" 
+                        required
+                        className="w-full bg-secondary/50 border border-border rounded-sm px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-accent" 
+                        placeholder="Seu nome"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">WhatsApp</label>
+                      <input 
+                        type="tel" 
+                        required
+                        className="w-full bg-secondary/50 border border-border rounded-sm px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-accent" 
+                        placeholder="(00) 00000-0000"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">E-mail</label>
+                      <input 
+                        type="email" 
+                        required
+                        className="w-full bg-secondary/50 border border-border rounded-sm px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-accent" 
+                        placeholder="seu@email.com"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs uppercase tracking-widest text-muted-foreground mb-2">Como podemos ajudar?</label>
+                      <textarea 
+                        rows={3}
+                        className="w-full bg-secondary/50 border border-border rounded-sm px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-accent resize-none" 
+                        placeholder="Descreva seu projeto ou dúvida..."
+                      ></textarea>
+                    </div>
+
+                    <button 
+                      type="submit"
+                      className="w-full inline-flex items-center justify-center gap-2 rounded-sm bg-foreground py-4 text-xs uppercase tracking-[0.2em] text-background transition-all hover:bg-foreground/90"
+                    >
+                      <Send className="h-3 w-3" />
+                      Enviar Solicitação
+                    </button>
+                  </form>
+                </>
+              ) : (
+                <div className="flex flex-col items-center justify-center py-12 text-center">
+                  <CheckCircle2 className="h-16 w-16 text-accent animate-in zoom-in duration-500" />
+                  <h3 className="mt-6 text-2xl font-light">Mensagem Enviada!</h3>
+                  <p className="mt-2 text-sm text-muted-foreground">Recebemos sua solicitação. <br /> Retornaremos o contato em breve.</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </main>
+  );
+}/p>
           </div>
         </div>
       </footer>
