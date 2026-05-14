@@ -5,11 +5,11 @@ import heroImage from "@/assets/hero-interior.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Voil Atelie | Enxovais, Cortinas e Decoração em Garça - SP" },
+      { title: "Confortebem | Enxovais, Conforto e Bem-estar para o Lar" },
       {
         name: "description",
         content:
-          "Voil Atelie: enxovais, cortinas sob medida, tapetes e almofadas decorativas. Tradição em decoração de interiores em Garça, SP.",
+          "Confortebem: especialistas em enxovais, conforto e bem-estar. Cortinas sob medida, jogos de cama, tapetes e almofadas com curadoria premium.",
       },
     ],
   }),
@@ -46,7 +46,7 @@ function HomePage() {
       <header className="absolute top-0 left-0 right-0 z-20">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
           <Link to="/" className="font-[family-name:var(--font-display)] text-2xl tracking-wide text-background md:text-foreground">
-            Voil <span className="italic">Atelie</span>
+            Conforte<span className="italic">bem</span>
           </Link>
           <nav className="hidden gap-8 text-sm md:flex text-foreground">
             <a href="#sobre" className="hover:text-accent transition-colors">Sobre</a>
@@ -60,7 +60,7 @@ function HomePage() {
       <section className="relative h-[92vh] min-h-[600px] w-full overflow-hidden">
         <img
           src={heroImage}
-          alt="Sala de estar elegante decorada com cortinas e almofadas Voil Atelie"
+          alt="Sala de estar elegante decorada com cortinas e almofadas Confortebem"
           width={1920}
           height={1080}
           className="absolute inset-0 h-full w-full object-cover"
@@ -68,13 +68,13 @@ function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/50 via-foreground/20 to-transparent" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6 md:px-10">
           <div className="max-w-2xl text-background">
-            <p className="mb-6 text-xs uppercase tracking-[0.3em] opacity-90">Atelie de Decoração — desde sempre</p>
+            <p className="mb-6 text-xs uppercase tracking-[0.3em] opacity-90">Conforto e bem-estar para o seu lar</p>
             <h1 className="text-5xl leading-[1.05] md:text-7xl">
-              Elegância e conforto que vestem o seu lar.
+              Conforto, elegância e bem-estar em cada detalhe.
             </h1>
             <p className="mt-6 max-w-lg text-base leading-relaxed opacity-90 md:text-lg">
-              Somos especialistas em transformar espaços com enxovais sofisticados,
-              cortinas sob medida e peças decorativas cuidadosamente selecionadas.
+              Na Confortebem, somos especialistas em enxovais, cortinas sob medida e peças
+              decorativas selecionadas para transformar sua casa em um refúgio acolhedor.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
               <a
@@ -87,7 +87,7 @@ function HomePage() {
                 href="#servicos"
                 className="inline-flex items-center justify-center rounded-sm border border-background/60 px-8 py-4 text-sm uppercase tracking-widest text-background transition-all hover:bg-background/10"
               >
-                Conheça nossa linha
+                Conheça nossa coleção
               </a>
             </div>
           </div>
@@ -105,17 +105,17 @@ function HomePage() {
           </div>
           <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              A <strong className="text-foreground">Voil Atelie Comércio de Enxovais e Decoração LTDA</strong> nasceu
-              da paixão por ambientes acolhedores e bem compostos. Há anos atendemos famílias e
-              arquitetos em Garça e região, oferecendo enxovais e peças decorativas com padrão
-              premium e atendimento próximo.
+              A <strong className="text-foreground">Confortebem</strong> é uma marca dedicada a oferecer
+              conforto e bem-estar para o lar. Operada pela <strong className="text-foreground">Voil Atelie
+              Comércio de Enxovais e Decoração LTDA</strong>, atendemos famílias e arquitetos em Garça e
+              região com enxovais e peças decorativas de padrão premium e atendimento próximo.
             </p>
             <p>
               Trabalhamos apenas com fornecedores de confiança e tecidos selecionados,
               garantindo qualidade que se revela no toque, na durabilidade e na beleza
               que permanece com o tempo.
             </p>
-            <p className="font-medium text-foreground">— Voil Atelie, há tradição em cada detalhe.</p>
+            <p className="font-medium text-foreground">— Confortebem, conforto que se sente em cada detalhe.</p>
           </div>
         </div>
       </section>
@@ -145,7 +145,7 @@ function HomePage() {
       <section id="contato" className="py-24 md:py-32">
         <div className="mx-auto grid max-w-6xl gap-16 px-6 md:grid-cols-2 md:px-10">
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.3em] text-muted-foreground">Visite o Atelie</p>
+            <p className="mb-4 text-xs uppercase tracking-[0.3em] text-muted-foreground">Visite-nos</p>
             <h2 className="text-4xl leading-tight md:text-5xl">
               Estamos próximos de você.
             </h2>
@@ -170,10 +170,10 @@ function HomePage() {
                 <div>
                   <p className="font-medium">E-mail</p>
                   <a
-                    href="mailto:contato@voilatelie.com.br"
+                    href="mailto:contato@confortebem.com.br"
                     className="text-muted-foreground hover:text-accent"
                   >
-                    contato@voilatelie.com.br
+                    contato@confortebem.com.br
                   </a>
                 </div>
               </li>
@@ -182,14 +182,14 @@ function HomePage() {
 
           <div className="flex flex-col gap-4">
             <a
-              href="mailto:contato@voilatelie.com.br"
+              href="mailto:contato@confortebem.com.br"
               className="inline-flex items-center justify-center rounded-sm border border-foreground/20 px-8 py-5 text-sm uppercase tracking-widest text-foreground transition-all hover:bg-secondary"
             >
               Solicite um catálogo por e-mail
             </a>
             <div className="mt-4 overflow-hidden rounded-sm border border-border">
               <iframe
-                title="Localização Voil Atelie"
+                title="Localização Confortebem"
                 src="https://www.google.com/maps?q=Rua+S%C3%A3o+Jo%C3%A3o,+86,+Gar%C3%A7a+-+SP,+17404-308&output=embed"
                 width="100%"
                 height="280"
@@ -208,18 +208,20 @@ function HomePage() {
           <div className="grid gap-10 md:grid-cols-3">
             <div>
               <p className="font-[family-name:var(--font-display)] text-2xl">
-                Voil <span className="italic">Atelie</span>
+                Conforte<span className="italic">bem</span>
               </p>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                Enxovais, cortinas e decoração de interiores. Tradição em compor lares com elegância.
+                Enxovais, conforto e bem-estar para o lar. Curadoria premium em cortinas, jogos de cama, tapetes e almofadas.
               </p>
             </div>
             <div className="text-sm text-muted-foreground">
               <p className="font-medium text-foreground mb-3">Empresa</p>
-              <p>Voil Atelie Comercio de Enxovais e Decoracao LTDA</p>
+              <p>
+                Confortebem é uma marca operada por <strong className="text-foreground">Voil Atelie Comercio de Enxovais e Decoracao LTDA</strong>
+              </p>
               <p className="mt-1">CNPJ: 64.980.979/0001-94</p>
               <p className="mt-1">Rua São João, 86 — Labienópolis — Garça/SP — CEP 17404-308</p>
-              <p className="mt-1">contato@voilatelie.com.br</p>
+              <p className="mt-1">contato@confortebem.com.br</p>
             </div>
             <div className="text-sm">
               <p className="font-medium mb-3">Institucional</p>
@@ -231,7 +233,7 @@ function HomePage() {
             </div>
           </div>
           <div className="mt-12 border-t border-border pt-6 text-xs text-muted-foreground flex flex-wrap justify-between gap-2">
-            <p>© {new Date().getFullYear()} Voil Atelie. Todos os direitos reservados.</p>
+            <p>© {new Date().getFullYear()} Confortebem — Voil Atelie Comercio de Enxovais e Decoracao LTDA. Todos os direitos reservados.</p>
             <p>Garça — São Paulo — Brasil</p>
           </div>
         </div>
