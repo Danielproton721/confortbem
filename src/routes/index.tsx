@@ -55,14 +55,14 @@ function HomePage() {
   };
 
   return (
-    <main className="min-h-screen bg-background text-foreground font-[family-name:var(--font-sans)]">
-      {/* Header */}
-      <header className="absolute top-0 left-0 right-0 z-20">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-10">
-          <Link to="/" className="font-[family-name:var(--font-display)] text-2xl tracking-wide text-background md:text-foreground">
-            Conforte<span className="italic">bem</span>
+    <main className="min-h-screen bg-white text-[#1a1a1a] font-[family-name:var(--font-sans)] selection:bg-accent/20">
+      {/* Header - Minimalist */}
+      <header className="absolute top-0 left-0 right-0 z-20 border-b border-black/5 bg-white/10 backdrop-blur-sm">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-10">
+          <Link to="/" className="font-[family-name:var(--font-display)] text-xl tracking-widest uppercase">
+            Conforte<span className="italic font-light">bem</span>
           </Link>
-          <nav className="hidden gap-8 text-sm md:flex text-foreground">
+          <nav className="hidden gap-10 text-[10px] uppercase tracking-[0.2em] md:flex font-medium">
             <a href="#sobre" className="hover:text-accent transition-colors">Sobre</a>
             <a href="#servicos" className="hover:text-accent transition-colors">Coleção</a>
             <a href="#contato" className="hover:text-accent transition-colors">Contato</a>
@@ -70,185 +70,155 @@ function HomePage() {
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="relative h-[92vh] min-h-[600px] w-full overflow-hidden">
+      {/* Hero - Clean & White Focus */}
+      <section className="relative h-[85vh] min-h-[600px] w-full overflow-hidden bg-white">
         <img
           src={heroImage}
-          alt="Sala de estar elegante decorada com cortinas e almofadas Confortebem"
+          alt="Sala de estar elegante"
           width={1920}
           height={1080}
-          className="absolute inset-0 h-full w-full object-cover"
+          className="absolute inset-0 h-full w-full object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-foreground/50 via-foreground/20 to-transparent" />
+        <div className="absolute inset-0 bg-white/40" />
         <div className="relative z-10 mx-auto flex h-full max-w-7xl items-center px-6 md:px-10">
-          <div className="max-w-2xl text-background">
-            <p className="mb-6 text-xs uppercase tracking-[0.3em] opacity-90">Conforto e bem-estar para o seu lar</p>
-            <h1 className="text-5xl leading-[1.05] md:text-7xl font-light">
-              Conforto, elegância e bem-estar em cada detalhe.
+          <div className="max-w-2xl">
+            <div className="mb-6 h-px w-12 bg-accent animate-in slide-in-from-left duration-1000" />
+            <p className="mb-4 text-[10px] uppercase tracking-[0.4em] text-accent font-semibold">Exclusividade & Conforto</p>
+            <h1 className="text-5xl leading-[1.1] md:text-7xl font-light tracking-tight">
+              Design que <br />
+              <span className="italic">abraça</span> o seu lar.
             </h1>
-            <p className="mt-6 max-w-lg text-base leading-relaxed opacity-90 md:text-lg">
-              Na Confortebem, somos especialistas em enxovais, cortinas sob medida e peças
-              decorativas selecionadas para transformar sua casa em um refúgio acolhedor.
+            <p className="mt-8 max-w-md text-base leading-relaxed text-[#4a4a4a] md:text-lg font-light">
+              Especialistas em enxovais e cortinas sob medida, criamos ambientes que refletem sua personalidade com elegância e bem-estar.
             </p>
-            <div className="mt-10 flex flex-wrap gap-4">
+            <div className="mt-12 flex flex-wrap gap-6">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="inline-flex cursor-pointer items-center justify-center rounded-sm bg-background px-8 py-4 text-sm uppercase tracking-widest text-foreground transition-all hover:bg-accent active:scale-95"
+                className="inline-flex cursor-pointer items-center justify-center border border-black bg-black px-10 py-5 text-[10px] uppercase tracking-[0.3em] text-white transition-all hover:bg-transparent hover:text-black active:scale-95"
               >
-                Fale com um consultor
+                Solicitar Atendimento
               </button>
               <a
                 href="#servicos"
-                className="inline-flex items-center justify-center rounded-sm border border-background/60 px-8 py-4 text-sm uppercase tracking-widest text-background transition-all hover:bg-background/10 active:scale-95"
+                className="inline-flex items-center justify-center border border-black/10 px-10 py-5 text-[10px] uppercase tracking-[0.3em] transition-all hover:border-black active:scale-95"
               >
-                Conheça nossa coleção
+                Ver Coleção
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Sobre */}
-      <section id="sobre" className="py-24 md:py-32">
-        <div className="mx-auto grid max-w-6xl gap-16 px-6 md:grid-cols-2 md:px-10">
+      {/* Sobre - Pure White */}
+      <section id="sobre" className="py-32 bg-white">
+        <div className="mx-auto grid max-w-6xl gap-20 px-6 md:grid-cols-2 md:px-10 items-center">
           <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.3em] text-muted-foreground font-medium">Sobre Nós</p>
-            <h2 className="text-4xl leading-tight md:text-5xl font-light">
-              Tradição, requinte e o cuidado de quem entende de lar.
+            <span className="text-[10px] uppercase tracking-[0.4em] text-accent font-semibold">Manifesto</span>
+            <h2 className="mt-6 text-4xl leading-tight md:text-5xl font-light tracking-tight">
+              A arte de viver bem começa no toque.
             </h2>
+            <div className="mt-10 h-px w-20 bg-black/10" />
           </div>
-          <div className="space-y-5 text-base leading-relaxed text-muted-foreground">
+          <div className="space-y-6 text-base leading-relaxed text-[#666] font-light">
             <p>
-              A <strong className="text-foreground font-medium">Confortebem</strong> é uma brand dedicada a oferecer
-              conforto e bem-estar para o lar. Operada pela <strong className="text-foreground font-medium">Voil Atelie
-              Comércio de Enxovais e Decoração LTDA</strong>, atendemos famílias e arquitetos em Garça e
-              região com enxovais e peças decorativas de padrão premium e atendimento próximo.
+              A <strong className="text-black font-normal uppercase tracking-wider text-sm">Confortebem</strong> nasceu do desejo de transformar casas em refúgios. Com curadoria premium e confecção artesanal, cada peça é escolhida para proporcionar uma experiência sensorial única.
             </p>
             <p>
-              Trabalhamos apenas com fornecedores de confiança e tecidos selecionados,
-              garantindo qualidade que se revela no toque, na durabilidade e na beleza
-              que permanece com o tempo.
+              De cortinas sob medida a jogos de cama em algodão nobre, nossa missão é unir tradição e requinte para quem não abre mão do cuidado em cada detalhe do lar.
             </p>
-            <p className="font-medium text-foreground italic">— Confortebem, conforto que se sente em cada detalhe.</p>
           </div>
         </div>
       </section>
 
-      {/* Serviços */}
-      <section id="servicos" className="bg-secondary/40 py-24 md:py-32 border-y border-border/50">
-        <div className="mx-auto max-w-6xl px-6 md:px-10">
-          <div className="mb-16 max-w-2xl">
-            <p className="mb-4 text-xs uppercase tracking-[0.3em] text-muted-foreground font-medium">Nossa Coleção</p>
-            <h2 className="text-4xl leading-tight md:text-5xl font-light">
-              Peças que compõem ambientes com personalidade.
-            </h2>
+      {/* Serviços - White Grid */}
+      <section id="servicos" className="py-32 bg-white border-y border-black/5">
+        <div className="mx-auto max-w-6xl px-6 md:px-10 text-center">
+          <div className="mb-20">
+            <span className="text-[10px] uppercase tracking-[0.4em] text-accent font-semibold">Nossa Curadoria</span>
+            <h2 className="mt-6 text-4xl font-light md:text-5xl tracking-tight">Essenciais para o seu Lar</h2>
           </div>
-          <div className="grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-4 overflow-hidden rounded-sm border border-border">
+          <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((s) => (
-              <article key={s.title} className="group bg-background p-8 transition-all hover:bg-card">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-sm bg-secondary/50 text-accent transition-colors group-hover:bg-accent group-hover:text-background">
-                  <s.icon className="h-6 w-6 stroke-[1.25]" />
+              <article key={s.title} className="group flex flex-col items-center">
+                <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-full border border-black/5 transition-all group-hover:border-accent group-hover:bg-accent group-hover:text-white">
+                  <s.icon className="h-6 w-6 stroke-[1]" />
                 </div>
-                <h3 className="mt-8 text-2xl font-light">{s.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                <h3 className="text-lg font-normal tracking-wide uppercase">{s.title}</h3>
+                <p className="mt-4 text-xs leading-relaxed text-[#888] font-light max-w-[200px] mx-auto uppercase tracking-wider">{s.desc}</p>
               </article>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Contato */}
-      <section id="contato" className="py-24 md:py-32">
-        <div className="mx-auto grid max-w-6xl gap-16 px-6 md:grid-cols-2 md:px-10">
-          <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.3em] text-muted-foreground font-medium">Visite-nos</p>
-            <h2 className="text-4xl leading-tight md:text-5xl font-light">
-              Estamos próximos de você.
-            </h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed">
-              Receba atendimento personalizado em nosso espaço, ou preencha o formulário
-              ao lado para que nossa equipe entre em contato com você.
-            </p>
+      {/* Contato - White Minimalist */}
+      <section id="contato" className="py-32 bg-white">
+        <div className="mx-auto max-w-4xl px-6 md:px-10 text-center">
+          <span className="text-[10px] uppercase tracking-[0.4em] text-accent font-semibold">Contato</span>
+          <h2 className="mt-6 text-4xl font-light md:text-5xl tracking-tight">
+            Vamos planejar seu espaço juntos?
+          </h2>
+          <p className="mt-8 text-[#666] font-light leading-relaxed max-w-2xl mx-auto">
+            Receba atendimento exclusivo. Nossa equipe está pronta para ajudar você a escolher as melhores opções para o seu conforto.
+          </p>
+          
+          <div className="mt-16 flex flex-col items-center gap-12">
+             <div className="flex flex-col md:flex-row gap-12 text-[10px] uppercase tracking-[0.3em] font-medium">
+                <div className="flex items-center gap-3">
+                  <MapPin className="h-4 w-4 text-accent" />
+                  <span>Garça — São Paulo</span>
+                </div>
+                <button 
+                  onClick={() => setIsModalOpen(true)}
+                  className="flex items-center gap-3 hover:text-accent transition-colors"
+                >
+                  <Mail className="h-4 w-4 text-accent" />
+                  <span>contato@confortebem.com.br</span>
+                </button>
+             </div>
 
-            <ul className="mt-10 space-y-6 text-sm">
-              <li className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-secondary text-accent">
-                  <MapPin className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="font-medium text-foreground">Endereço</p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Rua São João, 86 — Labienópolis<br />
-                    Garça — SP, CEP 17404-308
-                  </p>
-                </div>
-              </li>
-              <li className="flex items-start gap-4">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-sm bg-secondary text-accent">
-                  <Mail className="h-5 w-5" />
-                </div>
-                <div>
-                  <p className="font-medium text-foreground">E-mail</p>
-                  <button
-                    onClick={() => setIsModalOpen(true)}
-                    className="text-muted-foreground hover:text-accent transition-colors text-left"
-                  >
-                    contato@confortebem.com.br
-                  </button>
-                </div>
-              </li>
-            </ul>
-          </div>
-
-          <div className="flex flex-col justify-center">
-            <div className="rounded-sm border border-border p-8 bg-card/50 backdrop-blur-sm">
-              <h3 className="text-xl font-light mb-4">Interessado em nossa coleção?</h3>
-              <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
-                Clique no botão abaixo para preencher seus dados e solicitar nosso catálogo completo de enxovais e decoração.
-              </p>
-              <button
+             <button
                 onClick={() => setIsModalOpen(true)}
-                className="w-full inline-flex cursor-pointer items-center justify-center rounded-sm bg-foreground px-8 py-5 text-xs uppercase tracking-[0.2em] text-background transition-all hover:opacity-90 active:scale-[0.98]"
+                className="inline-flex cursor-pointer items-center justify-center bg-black px-12 py-6 text-[10px] uppercase tracking-[0.4em] text-white transition-all hover:bg-black/90 active:scale-95 shadow-xl shadow-black/10"
               >
-                Solicite o catálogo agora
+                Solicitar Catálogo Completo
               </button>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border bg-secondary/40 py-16">
-        <div className="mx-auto max-w-6xl px-6 md:px-10">
-          <div className="grid gap-12 md:grid-cols-3">
-            <div>
-              <p className="font-[family-name:var(--font-display)] text-2xl">
-                Conforte<span className="italic">bem</span>
+      {/* Footer - White Minimalist */}
+      <footer className="py-20 bg-white border-t border-black/5">
+        <div className="mx-auto max-w-7xl px-6 md:px-10">
+          <div className="flex flex-col md:flex-row justify-between items-start gap-12">
+            <div className="max-w-xs">
+              <p className="font-[family-name:var(--font-display)] text-xl tracking-widest uppercase mb-6">
+                Conforte<span className="italic font-light">bem</span>
               </p>
-              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
-                Enxovais, conforto e bem-estar para o lar. Curadoria premium em cortinas, jogos de cama, tapetes e almofadas com foco em qualidade e requinte.
+              <p className="text-[10px] uppercase tracking-[0.2em] text-[#999] leading-loose">
+                Curadoria premium em enxovais e decoração. Tradição e sofisticação em cada detalhe.
               </p>
             </div>
-            <div className="text-sm text-muted-foreground">
-              <p className="font-medium text-foreground mb-4 uppercase tracking-widest text-xs">Empresa</p>
-              <p className="leading-relaxed">
-                Marca operada por <strong className="text-foreground">Voil Atelie Comercio de Enxovais e Decoracao LTDA</strong>
-              </p>
-              <p className="mt-2">CNPJ: 64.980.979/0001-94</p>
-              <p className="mt-2">Garça — São Paulo — Brasil</p>
-            </div>
-            <div className="text-sm">
-              <p className="font-medium text-foreground mb-4 uppercase tracking-widest text-xs">Institucional</p>
-              <ul className="space-y-3 text-muted-foreground">
-                <li><Link to="/politica-de-privacidade" className="hover:text-accent transition-colors">Política de Privacidade</Link></li>
-                <li><Link to="/termos-de-uso" className="hover:text-accent transition-colors">Termos de Uso</Link></li>
-                <li><button onClick={() => setIsModalOpen(true)} className="hover:text-accent transition-colors">Contato e Catálogo</button></li>
-              </ul>
+            
+            <div className="grid grid-cols-2 gap-20 text-[10px] uppercase tracking-[0.2em] font-medium">
+              <div className="space-y-4">
+                <p className="text-accent mb-6">Links</p>
+                <Link to="/politica-de-privacidade" className="block hover:text-accent transition-colors">Privacidade</Link>
+                <Link to="/termos-de-uso" className="block hover:text-accent transition-colors">Termos</Link>
+              </div>
+              <div className="space-y-4">
+                <p className="text-accent mb-6">Empresa</p>
+                <p className="text-[#999] font-normal leading-relaxed">
+                  Voil Atelie Comercio de Enxovais <br />
+                  CNPJ: 64.980.979/0001-94
+                </p>
+              </div>
             </div>
           </div>
-          <div className="mt-16 border-t border-border pt-8 text-[10px] uppercase tracking-widest text-muted-foreground flex flex-wrap justify-between gap-4">
+          
+          <div className="mt-20 flex flex-col md:flex-row justify-between border-t border-black/5 pt-10 text-[9px] uppercase tracking-[0.3em] text-[#bbb]">
             <p>© {new Date().getFullYear()} Confortebem. Todos os direitos reservados.</p>
-            <p>Design de Interiores & Bem-estar</p>
+            <p>Especialistas em Conforto & Bem-estar</p>
           </div>
         </div>
       </footer>
