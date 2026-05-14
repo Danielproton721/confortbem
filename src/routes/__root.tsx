@@ -72,13 +72,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Confortebem | Enxovais, Conforto e Bem-estar para o Lar" },
-      { name: "description", content: "Confortebem — especialistas em enxovais, cortinas sob medida, tapetes e decoração premium. Conforto e bem-estar para o seu lar. Operada por Voil Atelie LTDA, Garça/SP." },
-      { name: "author", content: "Confortebem" },
-      { property: "og:title", content: "Confortebem | Enxovais e Bem-estar" },
-      { property: "og:description", content: "Conforto, elegância e bem-estar em cada detalhe do seu lar." },
+      { title: "Confotbem" },
+      { name: "description", content: "." },
+      { name: "author", content: "Voil Atelie" },
+      { property: "og:title", content: "Confotbem" },
+      { property: "og:description", content: "." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
+      { name: "twitter:title", content: "Confotbem" },
+      { name: "twitter:description", content: "." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c764df7d-2299-4a75-8929-f163db928f68/id-preview-7125d5dc--317d3f28-7413-48e1-9fcf-173ad2e6d6ab.lovable.app-1778787150154.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/c764df7d-2299-4a75-8929-f163db928f68/id-preview-7125d5dc--317d3f28-7413-48e1-9fcf-173ad2e6d6ab.lovable.app-1778787150154.png" },
     ],
     links: [
       {
@@ -98,7 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-BR">
+    <html lang="en">
       <head>
         <HeadContent />
       </head>
